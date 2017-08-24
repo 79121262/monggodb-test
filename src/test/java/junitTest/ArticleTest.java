@@ -19,9 +19,7 @@ import com.google.gson.Gson;
  * @author bear01.xiong
  */
 @RunWith(JUnit4ClassRunner.class)
-@ContextConfiguration(value="classpath*:/test-session.xml")
-//@ContextConfiguration(value="classpath:conf/spring_test.xml")
-//@ContextConfiguration(value="/mongoDBTest/src/test/resources/spring_test.xml")
+@ContextConfiguration(value="classpath*:/spring_test.xml")
 public class ArticleTest {
 	static Logger logger = Logger.getLogger(ArticleTest.class.getName());
 	Gson gson = new Gson();

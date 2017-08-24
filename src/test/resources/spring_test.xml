@@ -15,16 +15,13 @@
        ">
 
 	<!-- 引入jdbc配置文件 -->
-	<import resource="mongodb-context.xml"/>
+	<import resource="mongodb-context.xml" />
 
 	<!-- 扫描文件（自动将servicec层注入） -->
- 	<context:component-scan base-package="com.ebatong.cross.dao" />
- 	<context:component-scan base-package="com.ebatong.cross.base" />
-	<!-- spring 事务 mybatis事务配置 引用的数据源必须与mybatis sessionFactory引用发的数据源一致 -->
-	<!-- <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="dataSource" />
-	</bean> -->
+	<context:component-scan base-package="com.ebatong.cross.dao" />
+	<context:component-scan base-package="com.ebatong.cross.base" />
+
 	<!-- 开启事务注解 -->
 	<tx:annotation-driven transaction-manager="transactionManager" />
-	<task:annotation-driven/>
+	<task:annotation-driven />
 </beans>
